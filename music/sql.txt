@@ -1,0 +1,26 @@
+create table posts (
+	id int(11) not null PRIMARY KEY AUTO_INCREMENT,
+    subject varchar(128) not null,
+    content varchar(2000) not null,
+    date datetime not null
+);
+
+insert into posts (subject, content, date) VALUES ('This is the subject', 'ramdom fill in text dont what to do more', '2016-12-20 16:38:01');
+
+CREATE TABLE comments (
+ 	cid int(11) not null AUTO_INCREMENT PRIMARY KEY,
+    uid varchar(128) not null,
+    date datetime not null,
+    massage TEXT not null
+);
+CREATE TABLE user (
+    id int(11) not null PRIMARY KEY AUTO_INCREMENT,
+    first varchar(128) not null,
+    last varchar(128) not null,
+    email varchar(128) not null,
+    uid varchar(128) not null,
+    pwd varchar(1000) not null,
+    ip varchar(128) not null,
+    econfirm varchar(128) not null,
+    confirmed int(11) not null,
+)
